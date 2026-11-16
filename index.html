@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نافس | بواكير التعليمية</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+:root{
+ --purple:#5944a5;--deep:#211d46;--teal:#24b9c4;
+ --gold:#f4bd52;--bg:#f5f3fc;--white:#fff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:'Tajawal',sans-serif;color:#292447}
+header{
+ background:linear-gradient(120deg,#211d46,#51418c);
+ color:white;padding:22px 7%;display:flex;align-items:center;
+ justify-content:space-between;gap:15px;flex-wrap:wrap
+}
+.brand{display:flex;align-items:center;gap:13px}
+.brand img{width:76px;height:76px;object-fit:contain;background:white;border-radius:15px;padding:4px}
+.brand h2{margin:0;font-size:25px}
+.brand p{margin:5px 0;color:#d9d4f7}
+.header-tag{background:#ffffff20;padding:10px 17px;border-radius:30px}
+main{max-width:1100px;margin:auto;padding:25px 18px}
+.hero{
+ background:linear-gradient(130deg,#30265f,#6653b0);
+ border-radius:25px;color:white;padding:30px;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:20px;overflow:hidden;flex-wrap:wrap
+}
+.hero h1{font-size:38px;margin:0 0 10px}
+.hero p{font-size:18px;color:#e2ddff;line-height:1.8}
+.robot{font-size:105px;text-align:center;filter:drop-shadow(0 8px 12px #17102c)}
+.tagline{display:inline-block;background:#ffffff20;padding:10px 18px;border-radius:30px}
+.section-title{font-size:25px;margin:30px 0 15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:20px}
+.stat{background:white;border-radius:17px;padding:17px;text-align:center;box-shadow:0 4px 15px #2924470b}
+.stat strong{display:block;font-size:25px;color:var(--purple)}
+.stat span{color:#77718e;font-size:14px}
+.grades{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grade{background:white;border:2px solid transparent;border-radius:20px;padding:22px;cursor:pointer;text-align:right;transition:.2s}
+.grade:hover,.grade.active{border-color:var(--teal);transform:translateY(-3px)}
+.grade .emoji{font-size:38px}
+.grade h3{font-size:22px;margin:8px 0}
+.grade p{color:#77718e;margin:0}
+.subjects{display:flex;gap:12px;flex-wrap:wrap;margin-top:15px}
+.subject{border:0;border-radius:14px;padding:13px 22px;font-family:inherit;font-size:16px;font-weight:bold;background:white;color:var(--purple);cursor:pointer;box-shadow:0 3px 12px #29244712}
+.subject.active{background:var(--purple);color:white}
+.progress-box{background:white;border-radius:20px;padding:22px;margin-top:22px}
+.progress-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.bar{height:12px;background:#eeeaf8;border-radius:20px;margin:15px 0;overflow:hidden}
+.bar div{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--purple));border-radius:20px}
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}
+.stage{background:#f2effa;border-radius:14px;padding:15px 5px;text-align:center;color:#51418c}
+.stage span{font-size:23px;display:block;margin-bottom:5px}
+.stage small{font-size:12px}
+.stage.locked{opacity:.45}
+.stage.current{background:#e1f7f6;border:2px solid var(--teal)}
+.action{background:var(--purple);color:white;border:0;border-radius:13px;padding:13px 24px;font-family:inherit;font-size:17px;font-weight:bold;cursor:pointer;margin-top:15px}
+.action:hover{background:#40317e}
+.note{font-size:13px;color:#77718e;line-height:1.8}
+footer{text-align:center;padding:25px;color:#77718e}
+@media(max-width:600px){
+ .hero h1{font-size:29px}.robot{font-size:75px}
+ .stats{grid-template-columns:1fr 1fr}
+ .grades{grid-template-columns:1fr}
+ .stages{grid-template-columns:repeat(4,1fr)}
+ header{padding:16px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">
+  <img src="logo.jpg.jpg" alt="شعار بواكير ونافس">
+  <div>
+   <h2>نافس | بواكير</h2>
+   <p>منصة التدريب والتميز</p>
+  </div>
+ </div>
+ <div class="header-tag">⭐ عالم الأبطال</div>
+</header>
+
+<main>
+ <section class="hero">
+  <div>
+   <span class="tagline">🚀 مغامرتك التعليمية تبدأ هنا</span>
+   <h1>أهلًا بكِ في عالم نافس!</h1>
+   <p>أنا نافس، رفيقك الذكي في رحلة التعلم.<br>
+   اكتشفي مهاراتك، اجتازي المراحل، واصنعي إنجازك!</p>
+   <button class="action" onclick="document.getElementById('grades').scrollIntoView({behavior:'smooth'})">ابدئي المغامرة ✨</button>
+  </div>
+  <div class="robot">🤖</div>
+ </section>
+
+ <section class="stats">
+  <div class="stat"><strong>20</strong><span>مرحلة في كل مسار</span></div>
+  <div class="stat"><strong>⭐</strong><span>نقاط وأوسمة وإنجازات</span></div>
+  <div class="stat"><strong>🏆</strong><span>لوحة أبطال بواكير</span></div>
+ </section>
+
+ <h2 class="section-title" id="grades">🎯 اختاري صفك الدراسي</h2>
+ <div class="grades">
+  <div class="grade" onclick="chooseGrade(3,this)">
+   <div class="emoji">📚</div>
+   <h3>الصف الثالث الابتدائي</h3>
+   <p>لغتي – رياضيات</p>
+  </div>
+  <div class="grade" onclick="chooseGrade(6,this)">
+   <div class="emoji">🚀</div>
+   <h3>الصف السادس الابتدائي</h3>
+   <p>لغتي – رياضيات – علوم</p>
+  </div>
+ </div>
+
+ <section id="subjectArea" style="display:none">
+  <h2 class="section-title">📖 اختاري المادة</h2>
+  <div class="subjects" id="subjects"></div>
+ </section>
+
+ <section id="journey" class="progress-box" style="display:none">
+  <div class="progress-head">
+   <strong id="journeyTitle">رحلتي التعليمية</strong>
+   <span id="progressText">0 من 20 مرحلة</span>
+  </div>
+  <div class="bar"><div id="progressBar"></div></div>
+  <p class="note">كل مرحلة تمثل تحديًا جديدًا. تفتح المراحل بالتدرج بعد إتقان المهارات واجتياز التقييم.</p>
+  <div class="stages" id="stages"></div>
+  <button class="action" onclick="alert('سيتم ربط بنك الأسئلة ونظام التقدم في المرحلة التالية.')">دخول التحدي ⭐</button>
+ </section>
+</main>
+<footer>
+  <strong>بواكير التعليمية</strong><br>
+  نافس – رحلتك تبدأ بسؤال 💜
+</footer>
+
+<script>
+let selectedGrade=0, selectedSubject='';
+function chooseGrade(grade,element){
+ selectedGrade=grade;
+ document.querySelectorAll('.grade').forEach(x=>x.classList.remove('active'));
+ element.classList.add('active');
+ let subjects=grade===3?['لغتي','رياضيات']:['لغتي','رياضيات','علوم'];
+ document.getElementById('subjects').innerHTML='';
+ subjects.forEach(subject=>{
+  let b=document.createElement('button');
+  b.className='subject';
+  b.textContent=subject;
+  b.onclick=()=>chooseSubject(subject,b);
+  document.getElementById('subjects').appendChild(b);
+ });
+ document.getElementById('subjectArea').style.display='block';
+ document.getElementById('journey').style.display='none';
+ document.getElementById('subjectArea').scrollIntoView({behavior:'smooth'});
+}
+function chooseSubject(subject,button){
+ selectedSubject=subject;
+ document.querySelectorAll('.subject').forEach(x=>x.classList.remove('active'));
+ button.classList.add('active');
+ document.getElementById('journeyTitle').textContent=
+ 'رحلة الصف '+(selectedGrade===3?'الثالث':'السادس')+' – '+subject;
+ let stages=document.getElementById('stages');
+ stages.innerHTML='';
+ for(let i=1;i<=20;i++){
+  let div=document.createElement('div');
+  div.className='stage '+(i===1?'current':'locked');
+  div.innerHTML='<span>'+(i===1?'🚀':'🔒')+'</span><small>المرحلة '+i+'</small>';
+  stages.appendChild(div);
+ }
+ document.getElementById('progressText').textContent='0 من 20 مرحلة';
+ document.getElementById('progressBar').style.width='0%';
+ document.getElementById('journey').style.display='block';
+ document.getElementById('journey').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
